@@ -29,10 +29,10 @@ pipeline {
         }
       }
     }
-//         stage('Terraform apply'){
-//            steps {
-//                 sh 'terraform apply -input=false myplan'
-//          }
-//         }
+        stage('Terraform apply'){
+           steps {
+                sh 'terraform apply -input=false myplan'
+         }
+        }
     }
 }
