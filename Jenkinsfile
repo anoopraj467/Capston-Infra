@@ -17,6 +17,11 @@ pipeline {
                 sh 'terraform init'
             }
         }
+        stage('Terraform validate'){
+            steps{
+                sh 'terraform validate'
+            }
+        }
         stage('Terraform plan'){
             steps{
                 sh 'terraform plan -out myplan'
