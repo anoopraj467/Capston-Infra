@@ -36,7 +36,8 @@ pipeline {
     }
         stage('Terraform apply'){
            steps {
-                sh 'terraform apply -input=false myplan'
+//                 sh 'terraform apply -input=false myplan'
+               sh 'terraform apply --auto-approve "myplan"'
          }
         }
     }
